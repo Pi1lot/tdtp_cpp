@@ -7,6 +7,7 @@
 #include <stdexcept>
 
 using namespace std;
+
 template<typename T>
 class MatrixBase {
 protected:
