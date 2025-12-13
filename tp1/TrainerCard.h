@@ -4,22 +4,25 @@
 #include "Card.h"
 #include <string>
 #include <vector>
-#include <tuple>
+
+// Forward declaration for Player class usage
+class PokemonCard;
 
 class TrainerCard : public Card {
-    public:
-        explicit TrainerCard(const std::string& trainerEffect = "Heal all your action pokemon",
-                            const std::string& trainerName = "Energy");
-        
+public:
+    explicit TrainerCard(const std::string& trainerName = "Trainer",
+                         const std::string& trainerEffect = "Heal all your action pokemon");
 
-        const std::string& getTrainerEffect() const;
-        const std::string& getTrainerName() const;
+    const std::string& getTrainerEffect() const;
+    const std::string& getTrainerName() const;
+    void setTrainerEffect(const std::string& effect);
 
-        // override displayInfo -> same as pokemonCard
-        void displayInfo() const override;
+    void applyEffect(std::vector<PokemonCard*>& actionCards);
 
-    private:
-        std::string trainerEffect_;
+    void displayInfo() const override;
+
+private:
+    std::string trainerEffect_;
 };
 
 
