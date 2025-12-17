@@ -1,0 +1,9 @@
+Network device of unknown type:
+Hostname : core-sw-01
+IP address : 10.0.0.1
+Location : Datacenter A
+Vendor : Cisco
+OS Version : IOS XE 16.9.3
+Installed in : 2020
+This device is critical
+Power consumption : 420 W
